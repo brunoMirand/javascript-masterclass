@@ -79,10 +79,10 @@ for (n in numbers) {
 
 const numbersList = [[1,2,3], [4,5,6], [7,8,9]];
 const sumLists = numbersList.map(number => number.reduce((acc, curr) => acc + curr, 0));
-console.log(sumLists);
+// console.log(sumLists);
 
 const maxSumList = sumLists.reduce((acc, curr) => acc + curr, 0);
-console.log(maxSumList);
+// console.log(maxSumList);
 
 let sums = [];
 for (let i = 0; i < numbersList.length; i++) {
@@ -93,7 +93,7 @@ for (let i = 0; i < numbersList.length; i++) {
   sums.push(sum);
 }
 
-console.log(sums);
+// console.log(sums);
 
 
 let sumsTotal = 0;
@@ -101,4 +101,32 @@ for (let sum of sums) {
   sumsTotal += sum;
 }
 
-console.log(sumsTotal);
+// console.log(sumsTotal);
+
+// ----->
+function getMax(numbers) {
+  let max = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+  return max;
+}
+
+
+const maxElements = numbersList.map(numbers => getMax(numbers));
+
+console.log(maxElements);
+
+// ------>
+const numbersList2 = [1,2,3,4,5,6,7,8,9];
+
+let max = 0;
+for (let i = 0; i < numbersList2.length; i++) {
+  if (numbersList2[i] > max) {
+    max = numbersList2[i];
+  }
+}
+
+// console.log(max);
